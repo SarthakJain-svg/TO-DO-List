@@ -1,81 +1,26 @@
 <html>
 	<head>
-	<script>
-		function todoList()
-		{
-			var input = document.getElementById("abc").value;
-			var text = document.createTextNode(input);
-			var newElement = document.createElement("input");
-			newElement.setAttribute("type", "checkbox");
-			var label = document.createElement("label");
-			var newElement1 = document.createElement("li");
-			newElement1.appendChild(newElement);
-			label.appendChild(text);
-			newElement1.appendChild(label);
-			document.getElementById("ulist").appendChild(newElement1);
-		}
-		function DeleteTask()
-		{
-			/*var list = document.getElementById("ulist"); 
-			var x = document.querySelectorAll("input[type=checkbox]");
-            var arr = [];
-            var k = 0;
-			for(var  i = 0; i < x.length; i++)
-			{
-				if(x[i].checked === true)
-                {
-                	arr[k] = i+1;
-                    k++;
-                }
-			}
-            for(var j = 0; j < arr.length; j++)
-            {
-            	list.removeChild(list.childNodes[j]);
-                alert(arr[j]);
-            }*/
-			var list = document.getElementById("ulist"); 
-			list.innerHTML = "";
-		}
-		function CompleteTask()
-		{
-			//const ul = document.getElementById('ulist');
-			//const listItems = ul.getElementsByTagName('li');
-			//const listItems = ul.getElementsByTagName('label')[0];
-			/*var list = document.getElementById('ulist').getElementsByTagName('li');; 
-			var x = document.querySelectorAll("input[type=checkbox]");
-			var y = document.querySelector('#ulist li');
-			for(var  i = 0; i < x.length; i++)
-			{
-				if(x[i].checked === true)
-                {
-                	alert(y.textContent);
-                }
-			}*/
-			//alert(listItems);
-			const ul = document.querySelectorAll('ul li label');
-			for (let i = 0; i <= ul.length - 1; i++) {
-				alert(ul[i]);
-			}
-		}
-	</script>
+		<title>To Do List</title>
+		<link rel = "stylesheet" href="style.css">
+		<script src = "script.js"></script>
 	</head>
-	<body style="text-align: center; margin-top: 10%;">
+	<body>
 		<div id = "div1">
 			<input type = "text" placeholder = "Add your tasks..." id = "abc">
-			<button id = "add" onClick="todoList()">Add</button>
+			<input type = "submit" id = "add" onClick="addTask()" value="Submit">
 		</div>
 		<div id = "div 2">
 			<h1>To Do</h1>
-			<ul id = "ulist" style="list-style: none; margin-left: -253px;">
+			<ul id = "ulist">
 			</ul>
 			<button id = "complete" onClick="CompleteTask()">Complete</button>
-			<button id = "delete" onClick="DeleteTask()">Clear List</button>
+			<button id = "delete" onClick="DeleteTask()">Delete</button>
 		</div>
 		<div id = "div3">
 			<h1>Completed Tasks</h1>
 			<ul id = "ulist1">
 			</ul>
-			<button id = "delete1" style="margin-left: -175px;">Delete</button>
+			<button id = "delete1" onClick="DeleteCompleteTask()">Delete</button>
 		</div>
 	</body>
 </html>
