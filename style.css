@@ -1,18 +1,59 @@
 body
 {
-	text-align: center;
-	margin-top: 10%;
+	display: block;
+	width: 400px;
+	margin: 100px auto 0;
 }
+
+#heading
+{
+	text-align: center;
+} 
 
 #ulist, #ulist1
 {
-	
-	padding: 0 0 0 11px;
 	list-style: none;
-	width: 237px;
+}
+
+#ulist, #ulist1 label
+{
+	font-size: 18px;
+	color: #222;
+}
+
+input[type="checkbox"]
+{
+	cursor: pointer;
+	border: 1px solid #34495E;
+	outline: none;
+}
+
+#abc
+{
+	color: #666;
+    font-weight: bold;
+    line-height: 30px;
+	outline: none;
+	width: 350px;
+}
+
+#add, #complete, #delete, #delete1, #addInfo, #viewInfo
+{
+	background: none;
+	border: 0px;
+	color: #888;
+	font-size: 15px;
+	cursor: pointer;
+	font-family: Lato, sans-serif;
+	outline: none;
 }
 
 #delete1
 {
-	margin-left: -175px;
+	margin-left: 175px;
+}
+
+#add:hover, #complete:hover, #delete:hover, #delete1:hover, #addInfo:hover, #viewInfo:hover
+{
+	color: rgb(65, 51, 51);
 }

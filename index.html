@@ -5,19 +5,27 @@
 		<script src = "script.js"></script>
 	</head>
 	<body>
+		<u><h1 id="heading">TO DO LIST</h1></u><br><br>
 		<div id = "div1">
-			<input type = "text" placeholder = "Add your tasks..." id = "abc">
-			<input type = "submit" id = "add" onClick="addTask()" value="Submit">
-		</div>
-		<div id = "div 2">
-			<h1>To Do</h1>
+			<h3>ADD ITEM</h3>
+			<hr>
+			<input type = "text" onfocus="this.value=''" id = "abc">
+			<input type = "submit" id = "add" onClick="addTask()"  value="Add">
+		</div><br>
+		<div id = "div2">
+			<h3>TO DO</h3>
+			<hr>
 			<ul id = "ulist">
 			</ul>
 			<button id = "complete" onClick="CompleteTask()">Complete</button>
 			<button id = "delete" onClick="DeleteTask()">Delete</button>
-		</div>
+			<button id = "addInfo" onClick="addDescription()">Add Description</button>
+			<button id = "viewInfo" onClick="viewDescription()">View Description</button>
+			<br>
+		</div><br>
 		<div id = "div3">
-			<h1>Completed Tasks</h1>
+			<h3>COMPLETED</h3>
+			<hr>
 			<ul id = "ulist1">
 			</ul>
 			<button id = "delete1" onClick="DeleteCompleteTask()">Delete</button>
